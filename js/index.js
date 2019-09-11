@@ -1,14 +1,13 @@
 //Event #1 //
 
-const button = document.querySelector('.btn');
-
-button.addEventListener('mouseover', function (clickHandler) {
-    clickHandler.target.style.background = 'purple';
+const button = document.querySelectorAll('.btn');
+button.forEach(btn => {
+    btn.addEventListener('mouseover', () => {
+    btn.style.background = 'purple';
+    })
 })
 
-// button.addEventListener('mouseover', function (event) {
-//     event[0].target.style.background = 'purple';
-// })
+
 
 //Event #2 //
 
@@ -26,6 +25,8 @@ busImg.addEventListener('click', () => {
     busImg.style.display = 'none';
 });
 
+
+
 //Event #4 //
 const home = document.querySelector('.intro h2');
 home.addEventListener('mouseout', () => {
@@ -36,6 +37,8 @@ home.addEventListener('mouseout', () => {
     }
 });
 
+
+
 //Event #5 //
 
 const destination = document.querySelector('.destination');
@@ -43,23 +46,49 @@ destination.addEventListener('click', () => {
     destination.style.border = '.3px solid black'; 
 });
 
+
 // Event #6 //
 
-// const destImg = document.querySelector('.content-destination img');
-
-// destImg.addEventListener('focus', (event) => {
-//   event.target.style.background = 'pink';    
-// });
-
-// destImg.addEventListener('blur', (event) => {
-//   event.target.style.background = '';    
-// });
+const mainNav = document.querySelectorAll('a');
+mainNav.forEach(a => {
+    a.addEventListener('mouseover', () => {
+         a.style.color="orange"
+    })
+ })
 
 // Event #7 //
-const mainNav = document.querySelector('.main-navigation a');
-mainNav.addEventListener('mouseover', () => {
-    mainNav.style.color = 'orange';
+
+const dblP = document.querySelectorAll('p');
+dblP.forEach(p => {
+    p.addEventListener('mouseout', () => {
+        p.style.fontWeight = 'bold'
+    })
+})
+
+// Event #8 //
+
+window.addEventListener('resize', event => {
+    console.log(window.innerWidth, window.innerHeight)
+  })
+
+  //Event #9 //
+
+const subTitles = document.querySelectorAll('h4');
+subTitles.forEach(h4 => {
+    h4.addEventListener('dblclick', () => {
+        h4.style.color = 'green'
+    })
+})
+
+
+// Event #10 //
+
+const logo = document.querySelector('.logo-heading');
+logo.addEventListener('mouseout', () => {
+    logo.style.border = '.5px dotted red'; 
 });
+
+
 
 
 
@@ -68,8 +97,8 @@ console.log(button)
 console.log(busImg)
 console.log(home)
 console.log(destination)
-// console.log(destImg)
 console.log(mainNav)
-
+console.log(logo)
+console.log(subTitles)
 
 
