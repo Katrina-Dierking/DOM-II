@@ -43,7 +43,7 @@ home.addEventListener('mouseout', () => {
 
 const destination = document.querySelector('.destination');
 destination.addEventListener('click', () => {
-    destination.style.border = '.3px solid black'; 
+    destination.style.border = '.3px solid black';
 });
 
 
@@ -52,7 +52,8 @@ destination.addEventListener('click', () => {
 const mainNav = document.querySelectorAll('a');
 mainNav.forEach(a => {
     a.addEventListener('mouseover', () => {
-         a.style.color="orange"
+         a.style.color ='orange'
+         event.preventDefault()
     })
  })
 
